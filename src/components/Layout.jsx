@@ -8,7 +8,7 @@ import Footer from './Footer/Footer';
 
 function Layout() {
   return (
-    <Box>
+    <Box sx={{width: '100%', height: '100%'}}>
         <Grid container direction='column'>
             <Grid 
                 item 
