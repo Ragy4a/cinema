@@ -1,30 +1,30 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import { getActors } from "../../store/slices/actorsSlice";
-import { Box } from "@mui/material";
-
-import './ActorsList.css'
-
+import { Grid } from "@mui/material";
+import ActorItem from "./ActorsItem";
 
 function ActorsList() {
-
   const dispatch = useDispatch();
-  const actors = useSelector(state => state.actorsList.actors)
+  const actors = useSelector(state => state.actorsList.actors);
 
   useEffect(() => {
-    dispatch(getActors())
-  }, [dispatch])
+    dispatch(getActors());
+  }, [dispatch]);
 
   return (
-    <ul>
-        {actors.map(({id, fullName, image}) => (
-          <Box key={id} className='actor'>
-            <img src={image} alt="poster" />
-            {fullName}
-          </Box>
-        ))}
-    </ul>
-  )
+    <Grid container spacing={2}>
+      {actors.map(({ id, fullName, birthYear, image }) => (
+        <ActorItem
+          key={id}
+          id={id}
+          fullName={fullName}
+          birthYear={birthYear}
+          image={image}
+        />
+      ))}
+    </Grid>
+  );
 }
 
-export default ActorsList
+export default ActorsList;

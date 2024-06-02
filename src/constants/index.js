@@ -24,3 +24,13 @@ export const setRejected = (state, { payload }) => {
   state.status = 'rejected';
   state.error = payload;
 };
+
+export const createEmptyActor = () => {
+  return {
+    movies: [],
+    fullName: '', 
+    birthYear: '', 
+    nationality: '',
+    image: '',
+  }
+}

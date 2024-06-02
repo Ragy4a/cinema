@@ -1,0 +1,25 @@
+div[role='group'] {
+    display: flex;
+    justify-content: space-between;
+}
+
+#watch,
+#delete,
+#edit{
+    border: none;
+}
+
+#watch:hover {
+    color: white;
+    background-color: orange;
+}
+
+#edit:hover {
+    color: white;
+    background-color: green;
+}
+
+#delete:hover {
+    color: white;
+    background-color: red;
+}

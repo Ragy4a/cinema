@@ -28,7 +28,7 @@ function Layout() {
                     xl={2} 
                     sm={2} 
                     xs={2} 
-                ><NavBar/>
+                ><NavBar />
                 </Grid>
                 <Grid
                     item

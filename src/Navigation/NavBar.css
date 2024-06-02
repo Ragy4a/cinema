@@ -2,10 +2,16 @@
     box-sizing: border-box;
 }
 
-li {
+#nav-bar > li {
+    font-size: 2rem;
+    height: 5dvh;
     list-style: none;
 }
 
-a {
+#nav-bar > li > a,
+#nav-bar > li > a:visited {
+    color: #DAA520;
+    margin-left: 1dvw;
+    text-decoration: none;
     cursor: pointer;
 }
